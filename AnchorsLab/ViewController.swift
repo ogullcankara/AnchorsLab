@@ -44,9 +44,15 @@ class ViewController: UIViewController {
         redView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         redView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        redView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        redView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        /*redView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        redView.widthAnchor.constraint(equalToConstant: 500).isActive = true */
         
+        //width
+        redView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        redView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        //height
+        redView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
+        redView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100).isActive = true
         
         
     }
@@ -82,8 +88,8 @@ class ViewController: UIViewController {
     
     func makeView() -> UIView{
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = true
-        view.backgroundColor = .red
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.red
         
         return view
     }
